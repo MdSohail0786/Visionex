@@ -39,7 +39,8 @@ export default function Footer() {
               <span className="footer__logo-text">isionex</span>
             </a>
             <p className="footer__tagline">
-              Thinkers and doers changing the status quo, one bold idea at a time.
+              Thinkers and doers changing the status quo, one bold idea at a
+              time.
             </p>
           </div>
 
@@ -49,7 +50,9 @@ export default function Footer() {
               <ul className="footer__col-links">
                 {col.links.map((link) => (
                   <li key={link.label}>
-                    <a href={link.href} className="footer__link">{link.label}</a>
+                    <a href={link.href} className="footer__link">
+                      {link.label}
+                    </a>
                   </li>
                 ))}
               </ul>
@@ -61,12 +64,12 @@ export default function Footer() {
             <ul className="footer__col-links">
               <li>
                 <a href="mailto:support@visionex.com" className="footer__link">
-                  support@visionex.com
+                  mdsoahil01117@gmail.com
                 </a>
               </li>
               <li>
                 <a href="tel:+919999999999" className="footer__link">
-                  +91 99999 99999
+                  +91 9546012336
                 </a>
               </li>
             </ul>
@@ -75,11 +78,10 @@ export default function Footer() {
 
         <div className="footer__bottom">
           <p className="footer__copy">
-            &copy; {new Date().getFullYear()} Visionex. All rights reserved.
+            &copy; {new Date().getFullYear()} Visionex by Sohail. All rights
+            reserved.
           </p>
-          <p className="footer__made">
-            Crafted with intention.
-          </p>
+          <p className="footer__made">Crafted with intention.</p>
         </div>
       </div>
     </footer>

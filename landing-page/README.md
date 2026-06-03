@@ -3,29 +3,43 @@
 Production-ready React + Vite landing page.
 
 ## Stack
+
 - React 18 + Vite 5
 - Plain CSS (no Tailwind)
 - Component-based architecture
 
 ## Quick Start
+
 ```bash
 npm install
 npm run dev
 ```
 
 ## Build
+
 ```bash
 npm run build
 npm run preview
 ```
 
 ## Deploy to Vercel
+
 ```bash
 npm i -g vercel
 vercel --prod
 ```
 
+### Environment variables
+
+This project uses Vite (`import.meta.env.VITE_*`).
+
+- Configure variables in **Vercel Dashboard** (recommended) or
+- Copy `/.env.example` to `/.env` locally.
+
+> Note: `.env` is ignored by Git and should not contain committed secrets.
+
 ## Structure
+
 ```
 src/
 ├── components/     # All UI components (each with JSX + CSS)
