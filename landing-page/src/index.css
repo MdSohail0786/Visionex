@@ -1,0 +1,143 @@
+/* ============================
+   DESIGN TOKENS
+   ============================ */
+:root {
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "DM Sans", system-ui, sans-serif;
+
+  --color-paper: #faf8f3;
+  --color-surface: #f3f0e9;
+  --color-ink: #1a1814;
+  --color-ink-deep: #111009;
+  --color-ink-muted: #5a554c;
+  --color-accent: #b4936e;
+  --color-accent-dark: #8c6e4e;
+  --color-accent-light: #f0e4d4;
+  --color-accent-border: #dfc9b0;
+  --color-warm: #e8d5bf;
+  --color-sage-light: #d4e0d0;
+  --color-border: #e8e2d8;
+  --color-border-dark: #c8c0b4;
+
+  --max-width: 1180px;
+  --spacing-xs: 8px;
+  --spacing-sm: 16px;
+  --spacing-md: 24px;
+  --spacing-lg: 40px;
+  --spacing-xl: 64px;
+  --spacing-2xl: 80px;
+  --spacing-section: 120px;
+
+  --transition: 0.22s ease;
+}
+
+/* ============================
+   RESET & BASE
+   ============================ */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--color-paper);
+  color: var(--color-ink);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  font-family: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+/* ============================
+   SCROLL FADE-IN ANIMATION
+   ============================ */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger for child elements */
+.fade-in:nth-child(2) { transition-delay: 0.1s; }
+.fade-in:nth-child(3) { transition-delay: 0.2s; }
+.fade-in:nth-child(4) { transition-delay: 0.3s; }
+
+/* ============================
+   SHARED / UTILITY
+   ============================ */
+.about__eyebrow {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-accent-dark);
+  background: var(--color-accent-light);
+  border: 1px solid var(--color-accent-border);
+  padding: 5px 12px;
+  border-radius: 100px;
+  margin-bottom: var(--spacing-sm);
+}
+
+/* ============================
+   SCROLLBAR STYLING
+   ============================ */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-surface);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-accent-border);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent);
+}
+
+/* ============================
+   SELECTION
+   ============================ */
+::selection {
+  background: var(--color-accent-light);
+  color: var(--color-ink);
+}

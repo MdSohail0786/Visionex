@@ -1,0 +1,42 @@
+export const testimonials = [
+  {
+    id: 1,
+    name: "Sarah Mitchell",
+    role: "CEO, BrightPath",
+    avatar: "https://i.pravatar.cc/80?img=47",
+    text: "Working with this team completely shifted how we think about growth. They don't just deliver work — they embed into your vision and push it further than you imagined.",
+    active: true,
+  },
+  {
+    id: 2,
+    name: "James Okafor",
+    role: "Product Lead, Luminary",
+    avatar: "https://i.pravatar.cc/80?img=12",
+    text: "The clarity they brought to a very messy roadmap was remarkable. Within two weeks, we had alignment across three departments that hadn't agreed on anything in months.",
+    active: false,
+  },
+  {
+    id: 3,
+    name: "Priya Nair",
+    role: "Founder, Kova Health",
+    avatar: "https://i.pravatar.cc/80?img=5",
+    text: "Rare combination of strategic thinking and execution muscle. They told us what we needed to hear, not what we wanted — and they were right every single time.",
+    active: false,
+  },
+  {
+    id: 4,
+    name: "Tom Eriksson",
+    role: "CTO, Nordia Systems",
+    avatar: "https://i.pravatar.cc/80?img=33",
+    text: "The technical depth matched with the business acumen made this engagement genuinely different. Our team learned more in three months than in the previous year.",
+    active: false,
+  },
+  {
+    id: 5,
+    name: "Amara Diallo",
+    role: "Head of Strategy, Canvex",
+    avatar: "https://i.pravatar.cc/80?img=44",
+    text: "They took ownership of our biggest problem before we even finished explaining it. That kind of proactiveness is what separates good partners from great ones.",
+    active: false,
+  },
+];

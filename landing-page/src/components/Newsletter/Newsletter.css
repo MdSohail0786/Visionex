@@ -1,0 +1,203 @@
+.newsletter {
+  padding: var(--spacing-section) var(--spacing-lg);
+  background: var(--color-ink);
+  position: relative;
+  overflow: hidden;
+}
+
+.newsletter::before {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(180,147,110,0.15) 0%, transparent 70%);
+  top: -200px;
+  right: -100px;
+  pointer-events: none;
+}
+
+.newsletter::after {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.05);
+  bottom: -100px;
+  left: 5%;
+  pointer-events: none;
+}
+
+.newsletter__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-2xl);
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.newsletter__inner .about__eyebrow {
+  color: var(--color-accent-light);
+  background: rgba(180,147,110,0.15);
+  border-color: rgba(180,147,110,0.3);
+}
+
+.newsletter__heading {
+  font-family: var(--font-display);
+  font-size: clamp(1.9rem, 3vw, 2.8rem);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  color: #fff;
+  margin: 0 0 var(--spacing-sm);
+  line-height: 1.15;
+}
+
+.newsletter__subtitle {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.6);
+  margin: 0;
+  max-width: 400px;
+}
+
+.newsletter__form-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.newsletter__field {
+  display: flex;
+  gap: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1.5px solid rgba(255,255,255,0.15);
+  transition: border-color var(--transition);
+  background: rgba(255,255,255,0.06);
+}
+
+.newsletter__field:focus-within {
+  border-color: var(--color-accent);
+}
+
+.newsletter__field--error {
+  border-color: #e05c5c;
+}
+
+.newsletter__input {
+  flex: 1;
+  padding: 14px 18px;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: #fff;
+  min-width: 0;
+}
+
+.newsletter__input::placeholder {
+  color: rgba(255,255,255,0.3);
+}
+
+.newsletter__btn {
+  padding: 14px 24px;
+  background: var(--color-accent);
+  color: var(--color-ink);
+  border: none;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background var(--transition), transform var(--transition);
+  white-space: nowrap;
+}
+
+.newsletter__btn:hover {
+  background: #c8a87a;
+  transform: none;
+}
+
+.newsletter__btn:active {
+  transform: scale(0.98);
+}
+
+.newsletter__error {
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  color: #f07070;
+  margin: 4px 0 0;
+}
+
+.newsletter__note {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.35);
+  margin: 6px 0 0;
+}
+
+.newsletter__success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-lg);
+  border: 1.5px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  background: rgba(255,255,255,0.04);
+}
+
+.newsletter__success-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  color: var(--color-ink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.newsletter__success-msg {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: rgba(255,255,255,0.8);
+  text-align: center;
+  margin: 0;
+  font-weight: 300;
+}
+
+@media (max-width: 768px) {
+  .newsletter { padding: var(--spacing-xl) var(--spacing-md); }
+  .newsletter__inner {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+  }
+  .newsletter__subtitle { max-width: 100%; }
+  .newsletter__field {
+    flex-direction: column;
+    background: none;
+    border: none;
+    gap: var(--spacing-sm);
+    overflow: visible;
+  }
+  .newsletter__input {
+    border: 1.5px solid rgba(255,255,255,0.15);
+    border-radius: 8px;
+    background: rgba(255,255,255,0.06);
+    padding: 14px 18px;
+  }
+  .newsletter__btn {
+    border-radius: 8px;
+    padding: 14px;
+    width: 100%;
+  }
+}
